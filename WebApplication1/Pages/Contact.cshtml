@@ -1,0 +1,23 @@
+﻿@page
+@model WebApplication1.Pages.ContactModel
+@{
+    ViewData["Title"] = "Contact Page";
+
+}
+
+
+<h3>Contact Form</h3>
+
+@if(Model.hasData)
+{
+    <p>Hello @Model.firstname </p>
+}
+
+<div class="container">
+    <form method="POST">
+        <label for="fname">First Name</label><br>
+        <input type="text" id="fname" name="firstname" /><br />
+
+        <input type="submit" value="Submit" />
+    </form>
+</div>
