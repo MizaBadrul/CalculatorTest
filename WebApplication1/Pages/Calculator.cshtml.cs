@@ -22,8 +22,8 @@ namespace WebApplication1.Pages
 
             // CALL CALCULATOR FUNCTION
             //ans = Calculate(calInput);
-            //ans = Evaluate(calInput);
-            ans = Calculate_Stack(calInput);
+            ans = Evaluate(calInput);
+            //ans = Calculate_Stack(calInput);
 
         }
 
@@ -118,17 +118,10 @@ namespace WebApplication1.Pages
             foreach (var valStr in val)
             {
                 i++;
-                /*
-                if (Double.IsNaN(Convert.ToDouble(valStr)) && value != "")
-                {
-                    stack.Push(value);
-                    value = "";
-                }*/
 
                 if (valStr.Equals("("))
                 {
                     string innerExp = "";
-                    //i++; //Fetch Next Character
                     int bracketCount = 0;
 
                     var innerVal = val.Skip(i);

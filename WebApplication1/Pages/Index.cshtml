@@ -4,7 +4,19 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<h3>Calculator</h3>
+
+@if (Model.hasData)
+{
+    <p>Question: @Model.calInput </p>
+    <p>Answer: @Model.ans </p>
+}
+
+<div class="container">
+    <form method="POST">
+        <label for="calInput">Input</label><br>
+        <input type="text" id="calInput" name="calInput" /><br />
+
+        <input type="submit" value="Submit" />
+    </form>
 </div>
